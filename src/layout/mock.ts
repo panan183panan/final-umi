@@ -6,7 +6,7 @@ const data = [
   },
   {
     id:2,
-    path:'/vue3/list',
+    path:'/main/list',
     name:'股票组合列表'
   },
   {
