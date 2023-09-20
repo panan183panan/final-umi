@@ -9,12 +9,10 @@ import {
   MicroAppStateActions,
 } from 'qiankun';
 import { Microconfig } from '@/registerMicroAppsConfig';
+import { Spin } from 'antd';
+import React, { useState, useEffect } from 'react';
 
-import { Spin } from 'antd'
-import { useState, useEffect } from 'react';
-
-import './index.less'
-
+import './index.less';
 
 /**
  * 注册微应用
@@ -71,8 +69,8 @@ actions.onGlobalStateChange((state, prev) => {
 // });
 
 export default function IndexPage(props: any) {
-  const { children } = props
-  const [loading, setLoading] = useState<boolean>(false)
+  const { children } = props;
+  const [loading, setLoading] = useState<boolean>(false);
 
   return (
     <LayoutPage>
@@ -82,7 +80,7 @@ export default function IndexPage(props: any) {
             width: '100%',
             height: '100%',
             overflowY: 'auto',
-            padding:'10px'
+            padding: '10px',
           }}
         >
           <div>{children}</div>
@@ -90,6 +88,5 @@ export default function IndexPage(props: any) {
         </div>
       </Spin>
     </LayoutPage>
-
   );
 }

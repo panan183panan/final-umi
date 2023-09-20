@@ -9,7 +9,9 @@
 /**
    umi routes: https://umijs.org/zh/guide/router.html
  */
-export default [
+import { defineConfig } from 'umi';
+
+export default defineConfig([
   {
     path: '/login',
     title: '登录',
@@ -41,4 +43,4 @@ export default [
       },
     ],
   },
-];
+]);
