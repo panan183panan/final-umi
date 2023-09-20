@@ -30,8 +30,8 @@ export default [
         title: '首页',
       },
       {
-        path: '/vue3/list',
-        // component: '@/pages/main',
+        path: '/main/list',
+        component: '@/pages/list',
         title: '股票组合列表',
       },
       {
