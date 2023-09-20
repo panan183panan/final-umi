@@ -1,0 +1,31 @@
+.formContainer {
+  position: fixed;
+  background-color: rgba(74, 74, 74, 0.7);
+  width: 500px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  z-index: 100;
+  box-shadow: 0 8px 16px 0 rgba(231, 43, 43, 0.2);
+}
+
+.logintitle {
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  color: rgb(223, 95, 95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .formContainer {
+    background-color: #e6e6e6;
+    box-shadow: 0 8px 16px 0 #e6e6e6;
+  }
+
+  .logintitle {
+    color: #db3e3e;
+  }
+}
