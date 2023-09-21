@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Button, Input, message, Space, Row, Col } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ParticlesBg from 'particles-bg';
 import './login.less';
+import { history } from 'umi';
 export default function Login(props: any) {
+  useEffect(() => {
+    const isLogin = JSON.parse(sessionStorage.getItem('isLogin') || 'false');
+    if (isLogin) {
+      history.push('main/dashbord');
+    }
+  }, []);
+
   const onFinish = (values: any) => {
     console.log(values);
   };
@@ -16,6 +24,7 @@ export default function Login(props: any) {
 
   const quickLogin = () => {
     const loginPlatformState = Date.now().toString();
+    localStorage.setItem('loginPlatformState', loginPlatformState);
     window.location.href = `${loginData.url}?state=${loginPlatformState}&appid=${loginData.appid}`;
   };
 

@@ -24,7 +24,7 @@ export default defineConfig([
       {
         extract: true,
         path: '/',
-        redirect: '/main/dashbord',
+        redirect: '/login',
       },
       {
         path: '/main/dashbord',
